@@ -26,3 +26,8 @@ Initial steps taken
 25. Goto 127.0.0.1:8089 and you should see a laravel welcome screen.
 
 There is no .env in this repo.  You take the example env and copy it to .env .  Also you will need to create an app key.
+
+
+# for stlc
+make sure your php.ini has extension=php_gd2.dll uncommented
+then add "maatwebsite/excel": "^3.1" to your composer.json in src 
