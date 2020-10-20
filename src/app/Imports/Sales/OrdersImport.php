@@ -1,6 +1,6 @@
 <?php namespace App\Imports\Sales;
 
-use App\Models\Sales;
+use App\Models\Orders;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class OrdersImport implements ToModel
@@ -8,11 +8,11 @@ class OrdersImport implements ToModel
     /**
      * @param array $row
      *
-     * @return \App\Models\Sales|\Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Model[]|null
+     * @return \App\Models\Orders|\Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Model[]|null
      */
     public function model(array $row)
     {
-        return new Sales([
+        return new Orders([
             'name' => $row[0],
             'released' => $row[1],
             'need_re' => $row[2],

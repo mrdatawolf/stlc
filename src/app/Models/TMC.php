@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
  * Class Sales
  * @property $id;
  * @property $origin_state;
- * @property $city;
+ * @property $origin_city;
+ * @property $origin_county;
+ * @property $origin_zip_code;
  * @property $destination_state;
  * @property $destination_city;
  * @property $proposed_rate_mile_flatbed;
@@ -23,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class TMC extends Model
 {
-    public $fillable = ['origin_state', 'city', 'destination_state', 'destination_city', 'proposed_rate_mile_flatbed', 'fsc_7_18', 'six_thirteen', 'meet_minimum', 'miles', 'dollar_value', 'cost_no_tarp', 'cost_tarped', 'per_m'];
+    public $fillable = ['origin_state', 'origin_city', 'origin_county', 'origin_zip_code', 'destination_state', 'destination_city', 'proposed_rate_mile_flatbed', 'fsc_7_18', 'six_thirteen', 'meet_minimum', 'miles', 'dollar_value', 'cost_no_tarp', 'cost_tarped', 'per_m'];
     public $timestamps = true;
     protected $table = 'tmc';
     protected $primaryKey = 'id';
