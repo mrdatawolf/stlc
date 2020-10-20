@@ -23,6 +23,7 @@ Initial steps taken
 22. In the admin console run Set-ExecutionPolicy Restricted to return it to default.
 23. Create docker-compose.yml 
 24. Fix any errors shown.
+25. Go into docker desktop and start webserver.  There is an issue with the order the docker instances come up so you have to manually start this one for now
 25. Goto 127.0.0.1:8089 and you should see a laravel welcome screen.
 
 There is no .env in this repo.  You take the example env and copy it to .env .  Also you will need to create an app key.

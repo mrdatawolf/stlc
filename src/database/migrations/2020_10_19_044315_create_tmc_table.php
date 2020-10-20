@@ -16,7 +16,9 @@ class CreateTMCTable extends Migration
         Schema::create('tmc', function (Blueprint $table) {
             $table->id();
             $table->string('origin_state')->nullable();
-            $table->string('city')->nullable();
+            $table->string('origin_city')->nullable();
+            $table->string('origin_county')->nullable();
+            $table->string('origin_zip_code')->nullable();
             $table->string('destination_state')->nullable();
             $table->string('destination_city')->nullable();
             $table->string('proposed_rate_mile_flatbed')->nullable();

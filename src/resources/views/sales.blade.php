@@ -8,7 +8,13 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                @livewire('sales')
+                @livewire('orders-datatables')
+            </div>
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                @livewire('tmc-datatables')
+            </div>
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                @livewire('gray-frt-datatables')
             </div>
         </div>
     </div>

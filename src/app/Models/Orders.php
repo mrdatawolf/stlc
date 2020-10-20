@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Sales
+ * Class Orders
  * @property $id;
  * @property $name;
  * @property $released;
@@ -21,11 +21,11 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class Sales extends Model
+class Orders extends Model
 {
     public $fillable = ['name', 'released', 'need_re', 'order_number', 'po_number', 'quantity', 'thick', 'width', 'length', 'grade', 'mill', 'frt', 'total'];
     public $timestamps = true;
-    protected $table = 'sales';
+    protected $table = 'orders';
     protected $primaryKey = 'id';
     protected $connection = 'sqlite';
 }
