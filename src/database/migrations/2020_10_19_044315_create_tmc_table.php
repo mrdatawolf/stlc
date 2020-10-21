@@ -22,6 +22,7 @@ class CreateTMCTable extends Migration
             $table->string('destination_state')->nullable();
             $table->string('destination_city')->nullable();
             $table->string('proposed_rate_mile_flatbed')->nullable();
+            $table->string('minimum')->nullable();
             $table->string('fsc_7_18')->nullable();
             $table->string('six_thirteen')->nullable();
             $table->string('meet_minimum')->nullable();

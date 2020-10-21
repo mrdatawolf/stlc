@@ -24,8 +24,8 @@ class GrayFrtDatatables extends LivewireDatatable
 
             Column::name('town'),
             Column::name('miles'),
-            Column::name('rate'),
-            Column::name('value'),
+            NumberColumn::name('rate'),
+            NumberColumn::name('value'),
 
             DateColumn::name('created_at')
                       ->label('Creation Date'),

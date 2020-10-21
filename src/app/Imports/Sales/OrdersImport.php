@@ -12,7 +12,7 @@ class OrdersImport implements ToModel
      */
     public function model(array $row)
     {
-        return new Orders([
+         return new Orders([
             'name' => $row[0],
             'released' => $row[1],
             'need_re' => $row[2],

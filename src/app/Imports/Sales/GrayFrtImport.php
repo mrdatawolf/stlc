@@ -12,11 +12,29 @@ class GrayFrtImport implements ToModel
      */
     public function model(array $row)
     {
-        return new GrayFrt([
-            'town' => $row[0],
-            'miles' => $row[1],
-            'rate' => $row[2],
-            'value' => $row[3]
-        ]);
+        if(! empty($row[4]) && $row[4] !== 'RATE$') {
+            return new GrayFrt([
+                'town'  => $this->findName($row),
+                'miles' => $row[3],
+                'rate'  => $row[4],
+                'value' => $this->getValue($row)
+            ]);
+        } else {
+            return null;
+        }
+    }
+
+    private function findName($row) {
+        if(! empty($row[0])) {
+            return $row[0];
+        } elseif(! empty($row[1])) {
+            return $row[1];
+        }
+
+        return $row[2];
+    }
+
+    private function getValue($row) {
+        return $row[4]/24.192;
     }
 }

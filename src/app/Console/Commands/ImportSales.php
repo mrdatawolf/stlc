@@ -2,9 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Imports\SalesImport;
+use App\Imports\OrdersImport;
+use App\Imports\TMCImport;
+use App\Imports\GrayFrtImport;
 use Illuminate\Console\Command;
-use Maatwebsite\Excel\Facades\Excel;
 
 class ImportSales extends Command
 {
@@ -39,8 +40,14 @@ class ImportSales extends Command
      */
     public function handle()
     {
-        $this->output->title('Starting import');
-        (new SalesImport)->withOutput($this->output)->import(storage_path('exports/SALES.xlsx'));
-        $this->output->success('Import successful');
+        $this->output->title('Starting orders import');
+        (new OrdersImport)->withOutput($this->output)->onlySheets('Orders')->import(storage_path('exports/SALES.xlsx'));
+        $this->output->success('Imported orders successful');
+        $this->output->title('Starting tmc import');
+        (new TMCImport)->withOutput($this->output)->onlySheets('TMC')->import(storage_path('exports/SALES.xlsx'));
+        $this->output->success('Imported tmc successful');
+        $this->output->title('Starting gray frt import');
+        (new GrayFrtImport)->onlySheets('gray frt (3)')->import(storage_path('exports/SALES.xlsx'));
+        $this->output->success('Imported gray frt successful');
     }
 }
