@@ -11,16 +11,15 @@ use Maatwebsite\Excel\Concerns\WithMultipleSheets;
 use Maatwebsite\Excel\Concerns\SkipsUnknownSheets;
 use Maatwebsite\Excel\Concerns\WithProgressBar;
 
-class SalesImport implements WithMultipleSheets, SkipsUnknownSheets, WithChunkReading, WithProgressBar
+class TestImport implements WithMultipleSheets, SkipsUnknownSheets, WithChunkReading, WithProgressBar
 {
     use Importable;
 
     public function sheets(): array
     {
         return [
-            0 => new OrdersImport(),
-            6 => new TMCImport(),
-            10 => new GrayFrtImport(),
+            0 => new TMCImport(),
+            1 => new GrayFrtImport(),
         ];
     }
 
