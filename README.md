@@ -12,19 +12,20 @@ Initial steps taken
 11. Laravel needs a .env file in it's main directory (src) so make that. 
 12. Make directory db in src/database
 13. Touch core.sqlite in the new folder
-14. Go into src/config and edit database.php change default connection from mysql to sqlite. Also change env('DB_DATABASE', database_path('database.sqlite')) to database_path(env('DB_DATABASE')
-15. In STLC run: docker-compose up -d
-16. In src run composer require laravel/sanctum
-17. Still in src run php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-18. Still in src run composer require laravel/jetstream
-19. Still in src run php artisan jetstream:install livewire --teams
-20. In an admin console run Set-ExecutionPolicy Unrestricted
-21. Still in src run npm install then npm run dev
-22. In the admin console run Set-ExecutionPolicy Restricted to return it to default.
-23. Create docker-compose.yml 
-24. Fix any errors shown.
-25. Go into docker desktop and start webserver.  There is an issue with the order the docker instances come up so you have to manually start this one for now
-25. Goto 127.0.0.1:8089 and you should see a laravel welcome screen.
+14. Make a DOCKERFILE in the root directory of the project.  You will need to set it up from online resources or use the one I made.
+15. Go into src/config and edit database.php change default connection from mysql to sqlite. Also change env('DB_DATABASE', database_path('database.sqlite')) to database_path(env('DB_DATABASE'))
+16. In STLC run: docker-compose up -d
+17. In src run composer require laravel/sanctum
+18. Still in src run php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+19. Still in src run composer require laravel/jetstream
+20. Still in src run php artisan jetstream:install livewire --teams
+21. In an admin console run Set-ExecutionPolicy Unrestricted
+22. Still in src run npm install then npm run dev
+23. In the admin console run Set-ExecutionPolicy Restricted to return it to default.
+24. Create docker-compose.yml 
+25. Fix any errors shown.
+26. Go into docker desktop and start webserver.  There is an issue with the order the docker instances come up so you have to manually start this one for now
+27. Goto 127.0.0.1:8089 and you should see a laravel welcome screen.
 
 There is no .env in this repo.  You take the example env and copy it to .env .  Also you will need to create an app key.
 
