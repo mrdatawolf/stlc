@@ -19,7 +19,7 @@ Initial steps taken
 18. Still in src run php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 19. Still in src run composer require laravel/jetstream
 20. Still in src run php artisan jetstream:install livewire --teams
-21. In an admin console run Set-ExecutionPolicy Unrestricted (make sure you are doign this in powershell)
+21. In an admin console run Set-ExecutionPolicy Unrestricted (make sure you are doing this in powershell)
 22. Still in src run npm install then npm run dev
 23. In the admin console run Set-ExecutionPolicy Restricted to return it to default. (make sure you are doign this in powershell)
 24. Create docker-compose.yml 
